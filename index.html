@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Tariq Aziz | Associate Professor - UAF</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --uaf-green: #2e7d32;
+            --dark-green: #1b5e20;
+            --light-bg: #f4f7f4;
+            --text-main: #333;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            display: flex;
+        }
+
+        /* Sidebar */
+        nav {
+            width: 300px;
+            height: 100vh;
+            background: var(--uaf-green);
+            color: white;
+            position: fixed;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .logo-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo-box img { height: 55px; width: auto; }
+
+        nav h2 { font-size: 1.4rem; margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }
+
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { margin-bottom: 15px; }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+        nav ul li a i { width: 30px; }
+        nav ul li a:hover { color: #a5d6a7; transform: translateX(5px); }
+
+        /* Main Content */
+        main {
+            margin-left: 300px;
+            width: calc(100% - 300px);
+            padding: 50px;
+        }
+
+        /* Hero / Cover Section */
+        .hero-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            display: flex;
+            gap: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .profile-img {
+            width: 240px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero-content h1 { color: var(--uaf-green); margin: 0; font-size: 2.5rem; }
+        .hero-content h3 { color: #666; font-weight: 400; margin: 10px 0 20px 0; }
+        .hero-content p { color: #555; max-width: 700px; font-size: 1rem; }
+
+        .contact-links { margin-top: 20px; }
+        .contact-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background: var(--light-bg);
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            color: var(--uaf-green);
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+        .contact-btn:hover { background: var(--uaf-green); color: white; border-color: var(--uaf-green); }
+
+        /* Content Sections */
+        section { margin-bottom: 60px; scroll-margin-top: 50px; }
+        h2.section-title {
+            color: var(--uaf-green);
+            border-left: 6px solid var(--uaf-green);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th { text-align: left; background: #f8faf8; color: var(--dark-green); padding: 15px; border-bottom: 2px solid var(--uaf-green); }
+        td { padding: 15px; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+
+        .pub-item { margin-bottom: 20px; padding-left: 15px; border-left: 3px solid #eee; }
+        .pub-item strong { color: var(--uaf-green); display: block; margin-bottom: 5px; }
+
+        @media (max-width: 1000px) {
+            nav { width: 100%; height: auto; position: relative; }
+            main { margin-left: 0; width: 100%; padding: 20px; }
+            body { flex-direction: column; }
+            .hero-card { flex-direction: column; align-items: center; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo-box">
+        <img src="uaf_logo.png" alt="UAF Logo">
+        <img src="ini_logo.png" alt="INI Logo">
+    </div>
+    <h2>Dr. Tariq Aziz</h2>
+    <ul>
+        <li><a href="#about"><i class="fas fa-id-card"></i> About</a></li>
+        <li><a href="#experience"><i class="fas fa-history"></i> Experience</a></li>
+        <li><a href="#projects"><i class="fas fa-flask"></i> Research Projects</a></li>
+        <li><a href="#supervision"><i class="fas fa-graduation-cap"></i> Supervision</a></li>
+        <li><a href="#publications"><i class="fas fa-book"></i> Publications</a></li>
+        <li><a href="#events"><i class="fas fa-microphone-alt"></i> Events</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="about">
+        <div class="hero-card">
+            <img src="1000071938.jpg" alt="Dr. Tariq Aziz" class="profile-img">
+            <div class="hero-content">
+                <h1>Dr. Tariq Aziz</h1>
+                <h3>Associate Professor (Soil Science)</h3>
+                <p>Dr. Aziz serves as the Regional Director for South Asia at the International Nitrogen Initiative (INI) and holds the position of Associate Professor of Soil Science at the University of Agriculture, Faisalabad (UAF), Pakistan.</p>
+                <p>He is the lead partner from Pakistan in the global project "South Asia Nitrogen Hub" and is involved in the UNEP/GEF funded "International Nitrogen Management Systems (INMS)". With over 120 research articles, his focus remains on fertilizer use efficiency and nutrient pollution.</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:draziz@uaf.edu.pk" class="contact-btn"><i class="fas fa-envelope"></i> draziz@uaf.edu.pk</a>
+                    <a href="https://linkedin.com/in/tariq-aziz-44b95024/" target="_blank" class="contact-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://orcid.org/0000-0002-4300-3813" target="_blank" class="contact-btn"><i class="fab fa-orcid"></i> ORCID</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="card">
+            <table>
+                <tr>
+                    <th>Position</th>
+                    <th>Organization</th>
+                    <th>Duration</th>
+                </tr>
+                <tr><td>Principal, Sub-Campus Depalpur</td><td>University of Agriculture, Faisalabad</td><td>2018 - Oct 2023</td></tr>
+                <tr><td>Project Director (Rs. 889M Project)</td><td>HEC / UAF</td><td>2021 - 2022</td></tr>
+                <tr><td>Associate Professor</td><td>University of Agriculture, Faisalabad</td><td>2013 - Present</td></tr>
+                <tr><td>Adjunct Senior Lecturer</td><td>University of Western Australia</td><td>2014 - Present</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Funded Research Projects</h2>
+        <div class="card">
+            <div class="pub-item"><strong>South Asian Nitrogen Hub (PI - Pak Chapter)</strong> Funded by UKRI under GCRF. Total: £19.6 Million (2019-2023). Pak Share: Rs. 100 Million.</div>
+            <div class="pub-item"><strong>Bio-Nano-Fertilizers (PI)</strong> Enhancing nutrient use efficiency through microbially synthesized nano-fertilizers. Funded by HEC. Rs. 3.65 Million.</div>
+            <div class="pub-item"><strong>Bioenergy and Soil Conditioners (Team Leader)</strong> Collaborative research funded by the German Government. Euro 100,000.</div>
+        </div>
+    </section>
+
+    <section id="supervision">
+        <h2 class="section-title">Research Supervision</h2>
+        <div class="card">
+            <table>
+                <tr>
+                    <th>Degree</th>
+                    <th>Students Produced</th>
+                    <th>Currently Enrolled</th>
+                </tr>
+                <tr><td>M.Sc. (Hons.) - Supervisor</td><td>48</td><td>2</td></tr>
+                <tr><td>Ph.D. - Supervisor</td><td>5</td><td>0</td></tr>
+                <tr><td>Committee Member (M.Sc/Ph.D)</td><td>190</td><td>16</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="publications">
+        <h2 class="section-title">Key Publications</h2>
+        <div class="card">
+            <div class="pub-item"><strong>Book (2021)</strong> Nitrogen Assessment: Pakistan as a case study. Elsevier Academic Press Publishers, USA.</div>
+            <div class="pub-item"><strong>Journal Article (2025)</strong> Managing Fertilizer Rates and Tillage Depth to Improve Nitrogen Use Efficiency. <em>Journal of Soil Science and Plant Nutrition</em>.</div>
+            <div class="pub-item"><strong>Journal Article (2024)</strong> Nitrogen Mitigation. INMS Guidance Document on Sustainable Nitrogen Management.</div>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2 class="section-title">Events & Advisory</h2>
+        <div class="card">
+            <div class="pub-item"><strong>COP29 Baku (2024)</strong> Organizer, Side Event hosted by Ministry of Climate Change at Baku, Azerbaijan.</div>
+            <div class="pub-item"><strong>UNEA-7 (2025)</strong> Organized Consultative Workshop on Sustainable Nitrogen Management Resolution draft.</div>
+            <div class="pub-item"><strong>Wheat Campaign (2023)</strong> Focal Person for UAF Sub-Campus Depalpur Outreach Activities.</div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
